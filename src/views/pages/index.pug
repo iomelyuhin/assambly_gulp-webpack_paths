@@ -1,0 +1,20 @@
+extends ../main.layout.pug
+include ../mixins.pug
+
+
+block variables
+  - var title = 'Главная'
+
+block content
+    section.hero1
+        .container1
+        +linkPage("classsss", "product.html", "LLLLLINKKKK")
+          h2 Some block
+
+        +image("img-class", 'content/about-01.jpg', 'somealt')
+    //- include ../common/service-menu.pug
+    //- include ../common/benefits.pug
+    //- include ../common/about.pug
+    //- include ../common/main-textcontent.pug
+        
+block scripts

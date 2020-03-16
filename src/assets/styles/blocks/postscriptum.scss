@@ -1,0 +1,28 @@
+.postscriptum {
+  background-color: $grey-light;
+  padding: 34px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 22px;
+
+  @include phones {
+    font-size: 22px;
+    text-align: center;
+  }
+}
+
+.postscriptum__text {
+  font-family: "Ubu";
+  color: $text-light;
+
+  & span {
+    font-family: "Ubu-bold";
+    color: $title-color;
+  }
+}
+
+.postscriptum__text-highlighter {
+  font-family: "Ubu-bold";
+  color: $yellow;
+}

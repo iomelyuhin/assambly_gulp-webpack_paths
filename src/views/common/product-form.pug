@@ -1,0 +1,83 @@
+form.form
+  .form__row  
+    ul.form__list
+      li.form__item
+        label.form__label(for="f-city")
+          .form__input-title Город совершения сделки<span>*</span>
+          input#f-city.form__input(name="city")
+        label.form__label(for="f-seller")
+          .form__input-title Город получения счет-фактуры<span>*</span>
+          input#f-seller(name="seller").form__input
+        label.form__label(for="f-price")
+          .form__input-title Введите цену за штукур через запятую<span>*</span>
+          input#f-price.form__input
+        label.form__label(for="f-info")
+          .form__input-title Дополнительная информация<span>*</span>
+          input#f-info.form__input
+      li.form__item
+        label.form__label(for="f-date")
+          .form__input-title Дата и время<span>*</span>
+          input#f-date.form__input
+        label.form__label(for="f-goods")
+          .form__input-title Введите товар через запятую<span>*</span>
+          input#f-goods.form__input
+        label.form__label(for="f-phone")
+          .form__input-title Введите контактный номер телефона<span>*</span>
+          input#f-phone.form__input
+        label.form__label(for="f-card")
+          .form__input-title Номер дисконтной карты<span>*</span>
+          input#f-card.form__input
+      li.form__item
+        label.form__label(for="f-customer")
+          .form__input-title Заказчик услуг<span>*</span>
+          input#f-customer.form__input
+        label.form__label(for="f-quantity")
+          .form__input-title Введите количество через запятую<span>*</span>
+          input#f-quantity.form__input
+        label.form__label(for="f-email")
+          .form__input-title Введите адрес электронной почты<span>*</span>
+          input#f-email.form__input
+        .form__label.form__label--last
+          .form__input-title Ставка НДС <span>*</span>
+          .form__radio-row
+            label.form__radio-lbl
+              input.form__radio-input(type="radio" name="rate")
+              .form__radio-fake
+              .form__input-title.form__input-title--radio НДС 18%
+            label.form__radio-lbl
+              input.form__radio-input(type="radio" name="rate")
+              .form__radio-fake
+              .form__input-title.form__input-title--radio НДС 10%
+            label.form__radio-lbl
+              input.form__radio-input(type="radio" name="rate")
+              .form__radio-fake
+              .form__input-title.form__input-title--radio Без НДС
+
+  .form__row
+    .form__input-title.form__input-title--checkbxes В комплекте нужны:
+    .form__checkboxes
+      label.form__checkbox-lbl
+        input.form__checkbox-input(type="checkbox" name="rate")
+        .form__checkbox-fake
+        .form__input-title.form__input-title--checkbox Акт|Накладная
+      label.form__checkbox-lbl
+        input.form__checkbox-input(type="checkbox" name="rate")
+        .form__checkbox-fake
+        .form__input-title.form__input-title--checkbox Чек
+      label.form__checkbox-lbl
+        input.form__checkbox-input(type="checkbox" name="rate")
+        .form__checkbox-fake
+        .form__input-title.form__input-title--checkbox ПКО
+      label.form__checkbox-lbl
+        input.form__checkbox-input(type="checkbox" name="rate")
+        .form__checkbox-fake
+        .form__input-title.form__input-title--checkbox ТТН
+
+  .form__row
+    ul.form__buttons
+      li.form__btn
+        button.main-btn(type="button") Загрузите чек (изготовим по образцу)
+      li.form__btn
+        button.main-btn(type="button") Реквизиты Вашей организации
+      li.form__btn
+        button.main-btn(type="button") ЗАКАЗАТЬ

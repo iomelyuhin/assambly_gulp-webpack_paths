@@ -1,0 +1,41 @@
+.company {
+  margin-top: 70px;
+  font-family: "Ubu";
+  font-size: 18px;
+  color: $text-light;
+
+  & a {
+    color: $yellow;
+    border-bottom: 1px solid $yellow;
+    transition: color 0.3s, border-color 0.3s;
+
+    &:hover {
+      color: $blue;
+      border-color: $blue;
+    }
+  }
+}
+
+.company__desc-stats,
+.company__desc-order,
+.company__desc-why-we {
+  margin-top: 70px;
+}
+
+.company__text {
+  margin-top: 70px;
+
+  & p {
+    margin-top: 5px;
+    font-family: "Ubu";
+    font-size: 18px;
+    color: $text-light;
+    text-align: justify;
+  }
+
+  & h3 {
+    font-family: "Ubu-bold";
+    font-size: 22px;
+    color: $title-color;
+  }
+}

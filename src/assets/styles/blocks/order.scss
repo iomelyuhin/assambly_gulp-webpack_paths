@@ -1,0 +1,29 @@
+.order {
+  font-family: "Ubu-bold";
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include phones {
+    text-align: center;
+  }
+
+  .order__btn {
+    margin-top: 20px;
+    width: 40%;
+    color: $title-color;
+    background-color: $yellow;
+    border-color: $yellow;
+
+    &:hover {
+      color: #fff;
+      background-color: $blue;
+      border-color: $blue;
+    }
+  }
+}
+
+.order__title-upper {
+  text-transform: uppercase;
+}

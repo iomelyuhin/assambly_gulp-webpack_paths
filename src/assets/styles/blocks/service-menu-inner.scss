@@ -1,0 +1,71 @@
+.service-menu-inner {
+  background: url("/assets/images/content/bg_serv-menu.jpg") no-repeat;
+  background-size: cover;
+  padding: 22px 0;
+}
+
+.service-menu-inner__list {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include phones {
+    height: 100px;
+    overflow: hidden;
+    transition: height 1.3s;
+  }
+
+  &.active {
+    transition: height 1.3s;
+    height: 100%;
+    // overflow: unset;
+  }
+}
+
+.service-menu-inner__item {
+  width: 20%;
+
+  @include desktop {
+    width: 30%;
+  }
+
+  @include tablets {
+    width: 50%;
+  }
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.service-menu-inner__link {
+  font-family: "Ubu";
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $yellow;
+    text-decoration: underline;
+  }
+
+  @include tablets {
+    text-align: center;
+  }
+}
+
+.service-menu-inner__toggle {
+  outline: none;
+  display: none;
+
+  @include phones {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    font-size: 14px;
+    color: $yellow;
+    text-decoration: underline;
+  }
+}

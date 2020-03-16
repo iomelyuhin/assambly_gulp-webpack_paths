@@ -1,0 +1,97 @@
+.header {
+  background: url("/assets/images/content/bg_header.jpg");
+  padding: 20px 0;
+}
+
+.container--header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.header__logo {
+  @include tablets {
+    width: 130px;
+  }
+}
+
+.header__logo-pic {
+  @include tablets {
+    width: 100%;
+  }
+}
+
+.header__contacts {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 65px;
+  }
+}
+
+.header__contacts-link {
+  color: $title-color;
+}
+
+.header__contacts-item--phone {
+  font-family: "Ubu-bold";
+  font-size: 22px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: url("/assets/images/icons/phone.png") center center no-repeat;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.header__contacts-item--email {
+  font-family: "Ubu";
+  font-size: 22px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 19px;
+    height: 15px;
+    background: url("/assets/images/icons/envelope.png") center center no-repeat;
+    left: -24px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.header__contacts-item--city {
+  font-family: "Ubu-bold";
+  font-size: 22px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 19px;
+    background: url("/assets/images/icons/location.png") center center no-repeat;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  text-transform: uppercase;
+  text-decoration: underline;
+}

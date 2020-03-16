@@ -1,0 +1,173 @@
+.footer {
+  padding: 70px 0;
+  margin-top: 50px;
+  // min-height: 294px;
+  background: url("/assets/images/content/bg_footer.png") no-repeat;
+
+  .navigation {
+    background: transparent;
+    width: 50%;
+    height: unset;
+
+    @include tablets {
+      display: none;
+    }
+
+    .navigation__list {
+      flex-wrap: wrap;
+      height: unset;
+      // height: 100%;
+      // align-items: space-between;
+
+      .navigation__item {
+        width: 50%;
+        height: unset;
+        margin-bottom: 20px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .navigation__link {
+          border-bottom: 1px solid transparent;
+          transition: border-color 0.3s, color 0.3s;
+          width: fit-content;
+          padding: 0;
+          line-height: 1;
+          &:hover {
+            background-color: transparent;
+            color: $yellow;
+            border-bottom: 1px solid $yellow;
+          }
+        }
+      }
+    }
+  }
+}
+
+.container--footer {
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.footer__logo-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @include tablets {
+    width: 230px;
+  }
+  @include phones {
+    width: 100%;
+  }
+}
+
+.footer__logo {
+  @include tablets {
+    width: 130px;
+  }
+}
+
+.footer__logo-pic {
+  width: 100%;
+}
+
+.footer__copy {
+  font-family: "Ubu";
+  font-size: 18px;
+  color: $light-grey;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.footer__contacts-item--phone {
+  font-family: "Ubu-bold";
+  font-size: 22px;
+  position: relative;
+  @include tablets {
+    height: fit-content;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: url("/assets/images/icons/phone.png") center center no-repeat;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include tablets {
+    // flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+
+  @include phones {
+    align-items: center;
+  }
+}
+
+.footer__contacts-link {
+  color: #fff;
+}
+
+.footer__contacts-item--email {
+  font-family: "Ubu";
+  font-size: 22px;
+  position: relative;
+  @include tablets {
+    height: fit-content;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 19px;
+    height: 15px;
+    background: url("/assets/images/icons/envelope.png") center center no-repeat;
+    left: -24px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.footer__contacts-item--city {
+  font-family: "Ubu-bold";
+  font-size: 22px;
+  position: relative;
+
+  @include tablets {
+    display: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 19px;
+    background: url("/assets/images/icons/location.png") center center no-repeat;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  text-transform: uppercase;
+  text-decoration: underline;
+}

@@ -1,0 +1,24 @@
+.header {
+  .hamburger {
+    display: none;
+    outline: none;
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    z-index: 20;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 15px $light-grey;
+
+    .is-active {
+      z-index: 10;
+    }
+    @include tablets {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

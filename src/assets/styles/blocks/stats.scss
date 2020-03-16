@@ -1,0 +1,32 @@
+.stats__list {
+  display: flex;
+  justify-content: space-around;
+
+  @include tablets {
+    flex-wrap: wrap;
+  }
+}
+
+.stats__item {
+  text-align: center;
+  width: 18%;
+
+  @include tablets {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+}
+
+.stats__num {
+  font-family: "Bebas-bold";
+  font-size: 100px;
+  color: $blue;
+  line-height: 1;
+}
+
+.stats__title {
+  font-family: "Ubu-bold";
+  font-size: 18px;
+  color: $title-color;
+  text-transform: uppercase;
+}

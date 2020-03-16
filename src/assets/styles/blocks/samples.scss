@@ -1,0 +1,84 @@
+.samples {
+  margin-top: 70px;
+}
+
+.samples__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.samples__item {
+  width: 23%;
+  margin-top: 60px;
+
+  @include tablets {
+    width: 30%;
+  }
+
+  @include phones {
+    width: 48%;
+  }
+
+  @include phonesMini {
+    width: 100%;
+  }
+}
+
+.samples__item-title {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.samples__image {
+  margin-top: 20px;
+  border-radius: 7px;
+  overflow: hidden;
+  // width: 264px;
+  height: 365px;
+  cursor: pointer;
+  transition: filter 0.3s;
+
+  &:hover {
+    filter: brightness(50%);
+
+    &::before {
+      content: "";
+      width: 48px;
+      height: 48px;
+      background: url("/assets/images/icons/zoom.png") center center no-repeat;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      filter: brightness(100%);
+      z-index: 10;
+    }
+  }
+  @include tablets {
+    height: 305px;
+  }
+  @include phones {
+    height: 291px;
+  }
+  @include phonesMini {
+    height: unset;
+    width: 100%;
+  }
+}
+
+.samples__image-pic {
+  height: 100%;
+  @include phonesMini {
+    height: unset;
+    width: 100%;
+  }
+}
+
+.samples__btn {
+  margin-top: 20px;
+}

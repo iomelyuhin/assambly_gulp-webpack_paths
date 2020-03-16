@@ -1,0 +1,134 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    @include tablets {
+      font-size: 14px;
+    }
+    
+    @include phones {
+      font-size: 13px;
+    }
+    
+    @include phonesMini {
+      font-size: 12px;
+    }
+  }
+  
+  body {
+    font-family: 'Ubuntu', Arial, sans-serif;
+    -webkit-font-snoothing: antialiased;
+    -moz-osx-font-snoothing: grayscale;
+    // color: $title-color;
+    line-height: 1.42;
+    font-size: 16px;
+    
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul li {
+    list-style: none;
+  }
+  
+  button {
+    display: flex;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  a {
+    text-decoration: none;
+    // color: $title-color;
+  }
+  
+  .wrapper {
+    overflow: hidden;
+    width: 100%;
+    // height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .maincontent {
+    height: 100%;
+    transition: transform 1s;
+  }
+  
+  .container {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 95%;
+  }
+  
+  .title {
+    font-family: 'Bebas';
+    text-align: center;
+    font-size: 48px;
+    color: $title-color;
+  }
+
+  .title3 {
+      font-family: "Ubu-bold";
+      font-size: 18px;
+      color: $title-color;
+  }
+  
+  .subtitle {
+    // font-family: 'Mull-bold';
+    // font-size: rem(17px);
+  }
+  
+  .text {
+    font-family: "Ubu";
+    font-size: 16px;
+    color: $text-color;
+  }
+
+  .main-btn {
+      width: 100%;
+      padding: 20px;
+      background: $blue;
+      color: #fff;
+      border-radius: 10px;
+      font-family: "Ubu-bold";
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      align-items: center;
+      text-transform: uppercase;
+      transition: background-color 0.3s, color 0.3s;
+
+      &:hover {
+        background-color: $yellow;
+        color: #000;
+      }
+  }
+
+  body.compensate-for-scrollbar {
+    overflow: auto !important;
+  }

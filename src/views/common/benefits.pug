@@ -1,0 +1,86 @@
+-
+  var topBenList = [
+    {
+      icon: "ben-01.png",
+      title: "Доставим чеки в течение суток",
+      desc: "Высылаем сканы чеков на проверку в течение 4-х часов",
+      btnTitle: "КУПИТЬ ЧЕКИ",
+      btnLink: "/"
+    },
+    {
+      icon: "ben-02.png",
+      title: "Выгодные тарифы, без предоплаты",
+      desc: "Оплата заказа курьеру при получении. Возможна оплата QIWI.",
+      btnTitle: "Расценки",
+      btnLink: "/"
+    },
+    {
+      icon: "ben-03.png",
+      title: "Курьер, почта, самовывоз",
+      desc: "Курьерская доставка чеков по Москве, отправка первым классом",
+      btnTitle: "Доставка чеков",
+      btnLink: "/"
+    },
+    {
+      icon: "ben-04.png",
+      title: "Образцы чеков и бланков",
+      desc: "Образцы бланков, чеков и документов действующих организаций",
+      btnTitle: "Образцы чеков",
+      btnLink: "/"
+    }
+  ]
+-
+  var lastBenList = [
+    {
+      title: "Печатаем чеки",
+      desc: "По типу деятельности",
+      sublist: [
+        "Топливные", "Гостиничные", "Кафе, рестораны", 'Товарные чеки', 'Терминальные чеки'
+      ] 
+    },
+    {
+      title: "Подтверждаем расходы",
+      desc: "Чеки, документы, печати",
+      sublist: [
+        "Командировочные", "Представительские", "Прямые, косвенные", "Транспортные", "Акты оказания услуг"
+      ] 
+    },
+    {
+      title: "Что делаем?",
+      desc: "Чеки, документы, печати",
+      sublist: [
+        "Кассовые чеки", "Товарные чеки", "Гостиничные чеки", "Счет-фактуры, Торг", "Печати и штампы"
+      ] 
+    },
+    {
+      title: "Что не делаем!",
+      desc: "Даже не обращайтесь",
+      sublist: [
+        "Права, ПТС", "Гербовые печати", "Гос. учреждений", "Нотариальные бумаги", "и т.п."
+      ] 
+    }
+  ]
+section.benefits
+  .container
+    ul.benefits__first-list
+      each item in topBenList
+        li.benefits__first-item
+          .benefits__first-icon
+            img.benefits__first-icon-pic(src=`/assets/images/icons/${item.icon}` alt=`Иконка ${item.title}`)
+          h3.benefits__first-title.title3= item.title
+          .benefits__first-text.text= item.desc
+          a.main-btn.benefits__first-btn(href=`${item.btnLink}`)= item.btnTitle
+    ul.benefits__last-list
+      each item in lastBenList
+        li.benefits__last-item-wrap
+          .benefits__last-item
+            h4.benefits__last-title= item.title
+            .benefits__last-text.title3= item.desc
+            ul.benefits__last-subtitle
+              each subitem in item.sublist
+                li.benefits__last-subtitle-item
+                  .benefits__last-subtitle-item-text.text= `- ${subitem}`
+    .benefits__button-wrap
+      a.main-btn.benefits__btn(href="/") Оформить заказ
+                
+            

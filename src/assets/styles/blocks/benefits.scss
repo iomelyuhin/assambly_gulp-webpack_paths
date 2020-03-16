@@ -1,0 +1,145 @@
+.benefits {
+  margin-top: 80px;
+  background: url("/assets/images/content/bg_benefits.png") no-repeat;
+  padding-bottom: 85px;
+
+  @include desktop {
+    background-size: cover;
+  }
+}
+
+.benefits__first-list {
+  margin-top: 140px;
+  display: flex;
+  justify-content: space-between;
+
+  @include tablets {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+.benefits__first-icon {
+  height: 129px;
+}
+
+.benefits__first-icon-pic {
+  height: 100%;
+}
+
+.benefits__first-item {
+  width: 22%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:first-child {
+    @include tablets {
+      margin-bottom: 55px;
+    }
+  }
+
+  @include tablets {
+    width: 35%;
+  }
+
+  @include phones {
+    width: 80%;
+    margin-bottom: 55px;
+  }
+}
+
+.benefits__first-title {
+  margin-top: 30px;
+  max-width: 180px;
+}
+
+.benefits__first-text {
+  margin-top: 20px;
+  width: 205px;
+}
+
+.benefits__first-btn {
+  padding: 20px 0;
+  margin-top: 30px;
+  background-color: $yellow;
+  color: $title-color;
+  transition: color 0.3s, background-color 0.3s;
+  &:hover {
+    background-color: $blue;
+    color: #fff;
+  }
+}
+
+.benefits__last-list {
+  margin-top: 110px;
+  display: flex;
+  justify-content: space-between;
+
+  @include desktop {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+.benefits__last-item-wrap {
+  width: 25%;
+  @include desktop {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  @include tablets540 {
+    width: 100%;
+  }
+}
+.benefits__last-item {
+  min-height: 408px;
+  background: url("/assets/images/content/bg_benefits-check.png") no-repeat;
+  min-width: 258px;
+  max-width: 258px;
+  padding: 60px 30px;
+  @include tablets {
+  }
+
+  &:first-child {
+    @include desktop {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.benefits__last-title {
+  font-size: 30px;
+  font-family: "Bebas-bold";
+  text-align: center;
+  line-height: 1;
+}
+
+.benefits__last-text {
+  margin-top: 10px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.benefits__last-subtitle {
+  margin-top: 10px;
+}
+
+.benefits__last-subtitle-item {
+  line-height: 38px;
+}
+
+.benefits__button-wrap {
+  width: 20%;
+  align-self: center;
+  margin-top: 55px;
+
+  @include tablets {
+    width: 40%;
+  }
+  @include phones {
+    width: 80%;
+  }
+}

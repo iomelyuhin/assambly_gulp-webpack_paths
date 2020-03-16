@@ -1,0 +1,131 @@
+.service-menu__list {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+
+  @include phones {
+    height: 460px;
+    overflow: hidden;
+    transition: height 1.3s;
+  }
+
+  &.active {
+    transition: height 1.3s;
+    height: 100%;
+    // overflow: unset;
+  }
+}
+
+.service-menu__item {
+  padding: 20px 20px 0 0;
+  width: 25%;
+
+  @include desktop {
+    width: calc(100% / 3);
+  }
+
+  @include tablets {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+
+  @include tablets570 {
+    width: 100%;
+  }
+
+  &:last-child {
+    @include desktop {
+      width: 50%;
+    }
+
+    @include tablets570 {
+      width: 100%;
+    }
+  }
+
+  &:nth-child(19) {
+    @include desktop {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    @include tablets {
+      justify-content: center;
+    }
+
+    @include tablets570 {
+      width: 100%;
+    }
+  }
+}
+
+.service-menu__link {
+  // border: 1px solid $blue;
+  display: flex;
+  // padding: 20px;
+  border-radius: 10px;
+
+  &:hover {
+    .service-menu__text {
+      background-color: $yellow;
+      color: #000;
+    }
+  }
+}
+
+.service-menu__icon {
+  width: 85px;
+  height: 85px;
+  background: $light-grey;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include tablets {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.service-menu__icon-pic {
+  @include tablets {
+    height: 80%;
+  }
+}
+
+.service-menu__text {
+  display: flex;
+  text-transform: uppercase;
+  justify-content: center;
+  padding: 0 20px;
+  text-align: center;
+  align-items: center;
+  font-family: "Ubu-bold";
+  background-color: $blue;
+  border-radius: 0 10px 10px 0;
+  color: #fff;
+  width: 184px;
+  height: 85px;
+  transition: color 0.3s, background-color 0.3s;
+
+  @include tablets {
+    height: 50px;
+  }
+}
+
+.service-menu__toggle {
+  display: none;
+  outline: none;
+
+  @include phones {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    font-size: 22px;
+    color: $yellow;
+    text-decoration: underline;
+  }
+}

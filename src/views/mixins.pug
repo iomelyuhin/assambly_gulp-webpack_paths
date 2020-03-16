@@ -1,0 +1,40 @@
+
+mixin icon(name,mod)
+	- mod = mod || ''
+	svg(class="icon icon--" + name + ' ' + mod)
+		//- use(xlink:href="assets/images/sprite.svg#" + name)
+
+mixin linkPage(classs, pageName, text)
+	//- - import paths from '../paths'
+	- var rootPath = "c:/test2/"
+	- var htmlPath = ""
+	- var assetsPath = "assets/"
+	
+
+	a(class=classs href=rootPath+htmlPath+pageName)= text
+		if block
+			block
+
+mixin image(classs, imgName, alt)
+	//- - import paths from '../paths'
+	- var rootPath = "c:/test2/"
+	- var htmlPath = ""
+	- var assetsPath = "assets/images/"
+	
+
+	img(src=rootPath+assetsPath+imgName alt=alt)
+
+mixin linkStyles(styleName)
+	//- - import paths from '../paths'
+	- var rootPath = "c:/test2/"
+	- var assetsPath = "assets/styles/"
+	
+	link(rel='stylesheet' href=rootPath+assetsPath+styleName)
+
+mixin linkScript(scriptName)
+	//- - import paths from '../paths'
+	- var rootPath = "c:/test2/"
+	- var assetsPath = "assets/scripts/"
+
+	script(src=rootPath+assetsPath+scriptName)
+	

@@ -1,0 +1,34 @@
+-
+  var serviceList = [
+    {icon: "samples-01.png",name: "Кассовые чеки", href: "/product.html"},
+    {icon: "samples-02.png",name: "Товарные чеки", href: "/product.html"},
+    {icon: "samples-03.png",name: "Акты на работу", href: "/product.html"},
+    {icon: "samples-04.png",name: "Документы, сметы", href: "/product.html"},
+    {icon: "samples-05.png",name: "Счёт-фактуры", href: "/product.html"},
+    {icon: "samples-06.png",name: "Товарные накладные", href: "/product.html"},
+    {icon: "samples-07.png",name: "Заказ-наряды", href: "/product.html"},
+    {icon: "samples-08.png",name: "Гостиничные чеки", href: "/product.html"},
+    {icon: "samples-09.png",name: "Чеки АЗС, СТО", href: "/product.html"},
+    {icon: "samples-10.png",name: "Чеки такси и стоянок", href: "/product.html"},
+    {icon: "samples-11.png",name: "Чеки на стройматериалы", href: "/product.html"},
+    {icon: "samples-12.png",name: "Чеки на технику", href: "/product.html"},
+    {icon: "samples-13.png",name: "Чеки на билеты", href: "/product.html"},
+    {icon: "samples-14.png",name: "Ресторанные чеки", href: "/product.html"},
+    {icon: "samples-15.png",name: "Продуктовые чеки", href: "/product.html"},
+    {icon: "samples-16.png",name: "Медицинские чеки", href: "/product.html"},
+    {icon: "samples-17.png",name: "Чеки из терминалов", href: "/product.html"},
+    {icon: "samples-18.png",name: "Чеки почты России", href: "/product.html"},
+    {icon: "samples-19.png",name: "НДС подтверждение", href: "/product.html"},
+    {icon: "samples-20.png",name: "Чеки онлайн", href: "/product.html"}
+  ]
+
+aside.service-menu
+  .container
+    ul.service-menu__list#serviceMenu
+      each item in serviceList
+        li.service-menu__item
+          a.service-menu__link(href=`${item.href}`)
+            .service-menu__icon
+              img.service-menu__icon-pic(src=`/assets/images/icons/${item.icon}` alt=`Иконка ${item.name}`)
+            .service-menu__text= item.name
+    button(type="button").service-menu__toggle#toggleMenuBtn Показать/скрыть все услуги

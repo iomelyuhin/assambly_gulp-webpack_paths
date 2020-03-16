@@ -1,0 +1,37 @@
+-
+  var aboutList = [
+    {name: "Гостиничные чеки", desc: "От любой гостиницы РФ", href: "/"},
+    {name: "КАССОВЫЕ ЧЕКИ", desc: "Абсолютно любые", href: "/"},
+    {name: "ТОВАРНЫЕ ЧЕКИ", desc: "Все формы", href: "/"},
+    {name: "СЧЕТ-ФАКТУРЫ", desc: "Более 70-ти контрагентов", href: "/"},
+    {name: "РЕСТОРАННЫЕ ЧЕКИ", desc: "С подбором блюд", href: "/"},
+    {name: "ТОВАРНЫЕ НАКЛАДНЫЕ", desc: "Реальные компании", href: "/"},
+    {name: "ДОГОВОРЫ, СМЕТЫ", desc: "Составление", href: "/"},
+    {name: "ЗАКАЗ-НАРЯДЫ", desc: "На ремонт авто", href: "/"},
+    {name: "АКТЫ НА РАБОТУ", desc: "Более 70-ти контрагентов", href: "/"}
+  ]
+
+-
+  var aboutImages = [
+    "about-01.jpg",
+    "about-02.jpg",
+    "about-03.jpg",
+    "about-04.jpg"
+  ]
+
+section.about
+  h2.about__title.title Профессиональное изготовление чеков и документов
+  h3.about__subtitle Вы обратились по адресу, если Вам понадобилось:
+  .container.container--about
+    ul.about__text-list
+      each item in aboutList
+        li.about__text-item
+          a.about__text-item-link(href=`${item.href}`)
+            h2.about__text-item-title= item.name
+          .about__text-item-desc= item.desc
+    .about__images
+      ul.about__images-list
+        each item in aboutImages
+          li.about__images-item
+            a(data-fancybox="about" href=`/assets/images/content/${item}`)
+              img.about__image(src=`/assets/images/content/${item}` alt=`${item}`)

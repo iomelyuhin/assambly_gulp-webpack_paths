@@ -1,0 +1,35 @@
+.prod__text {
+  margin-top: 48px;
+
+  & p {
+    font-family: "Ubu";
+    font-size: 18px;
+    color: $text-light;
+    text-align: justify;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  & h3 {
+    font-family: "Ubu-bold";
+    font-size: 22px;
+    color: $title-color;
+    margin-top: 50px;
+  }
+
+  & li {
+    font-family: "Ubu";
+    font-size: 18px;
+    color: $text-light;
+
+    & span {
+      font-family: "Ubu-bold";
+    }
+  }
+
+  .prod__text-top-list {
+    margin-left: 20px;
+  }
+}

@@ -1,0 +1,11 @@
+-
+  var paymethodsList = [
+    "pay-01.png", "pay-02.png", "pay-03.png", "pay-04.png", "pay-05.png", "pay-06.png"
+  ]
+
+.paymethods
+  h2.paymethods__title.title Мы принимаем любые способы оплаты удобные Вам:
+  ul.paymethods__list
+    each item in paymethodsList
+      li.paymethods__item
+        img.paymethods__img(src=`/assets/images/icons/${item}` alt=`${item}`)

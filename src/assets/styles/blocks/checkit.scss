@@ -1,0 +1,180 @@
+.checkit__title {
+  font-family: "Bebas";
+  font-size: 30px;
+  color: $title-color;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.checkit__content {
+  margin-top: 20px;
+  display: flex;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+  }
+}
+
+.checkit__list-btns {
+  width: 35%;
+  flex-shrink: 0;
+  margin-right: 30px;
+
+  @include tablets {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    justify-content: space-around;
+  }
+}
+.checkit__item-btns {
+  width: 100%;
+  margin: 5px;
+  @include tablets {
+    width: 40%;
+    // display: flex;
+    // justify-content: center;
+  }
+  @include phones {
+    width: 90%;
+  }
+}
+
+.checkit__item-btns-btn {
+  font-family: "Ubu-bold";
+  outline: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: $title-color;
+  padding: 0 16px;
+  height: 53px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  text-align: left;
+  position: relative;
+  @include tablets {
+    // display: none;
+    // align-items: center;
+    padding: 10px;
+    // text-align: center;
+    height: unset;
+  }
+
+  @include phones {
+    text-align: left;
+  }
+
+  &.active {
+    // display: flex;
+    background-color: $yellow;
+    width: 100%;
+    @include tablets {
+      // background-color: transparent;
+    }
+    &::after {
+      @include tablets {
+        display: none;
+      }
+      content: "";
+      width: 37.5px;
+      height: 37.5px;
+      border-radius: 10px;
+      position: absolute;
+      right: -12px;
+      top: 7;
+      transform: rotate(45deg);
+      background-color: $yellow;
+      z-index: -1;
+    }
+  }
+}
+.checkit__list-text {
+  background-color: $grey-light;
+  border-radius: 10px;
+  padding: 18px 20px;
+  width: 100%;
+
+  @include tablets {
+    width: 100%;
+    position: relative;
+  }
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.checkit__item-title {
+  display: none;
+
+  @include tablets {
+    display: block;
+    text-align: center;
+    font-family: "Ubu-bold";
+    font-size: 22px;
+    color: $title-color;
+    // position: absolute;
+    // padding: 20px;
+    // top: 0;
+  }
+}
+
+.checkit__item-text {
+  display: none;
+  font-family: "Ubu";
+  font-size: 18px;
+  color: $text-light;
+  text-align: justify;
+
+  &.active {
+    display: block;
+  }
+
+  & p {
+    margin: 0;
+  }
+}
+
+.checkit__controls {
+  display: none;
+  @include tablets {
+    position: absolute;
+    font-family: "Ubu";
+    font-size: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    left: 0;
+    top: 10px;
+  }
+}
+
+.checkit__controls-btn {
+  background-color: $grey-light;
+  color: $blue;
+  height: 37px;
+  width: 37px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $yellow;
+  }
+
+  &:first-child {
+    position: absolute;
+    left: -45px;
+  }
+  &:last-child {
+    position: absolute;
+    right: -45px;
+  }
+}

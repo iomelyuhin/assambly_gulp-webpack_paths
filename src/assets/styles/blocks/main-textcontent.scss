@@ -1,0 +1,42 @@
+.main-textcontent {
+  margin-top: 80px;
+
+  & p {
+    font-family: "Ubu";
+    font-size: 18px;
+    color: $text-light;
+    text-align: justify;
+  }
+
+  & h3 {
+    font-family: "Ubu-bold";
+    font-size: 22px;
+    color: $title-color;
+  }
+}
+
+.main-textcontent__block {
+  margin-top: 20px;
+  display: flex;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.main-textcontent-image-wrap {
+  @include tablets {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.main-textcontent-image {
+  margin: 0 50px;
+  box-shadow: 1px 1px 15px $title-color;
+}
+
+.main-textcontent__block-last {
+  margin-top: 20px;
+}

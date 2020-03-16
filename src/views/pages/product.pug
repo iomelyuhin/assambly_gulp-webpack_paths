@@ -1,0 +1,13 @@
+extends ../main.layout.pug
+include ../mixins.pug
+
+block variables
+  - var title = 'Страница товара'
+
+block content 
+  -
+    var prodList = ['prod-01.jpg', 'prod-01.jpg', 'prod-01.jpg', 'prod-01.jpg']
+  section.product
+    .container
+      +linkPage("prod-classss", "index.html", "LinkText")
+        p Link paragraph

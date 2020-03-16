@@ -1,0 +1,107 @@
+.faq {
+  margin-top: 70px;
+}
+
+.faq__content {
+  margin-top: 60px;
+}
+
+.faq__item-wrap {
+  // margin-left: 90px;
+  display: flex;
+  flex-direction: column;
+}
+
+.faq__item-btn {
+  // flex-direction: column;
+  text-align-last: left;
+  align-items: start;
+  outline: none;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    position: relative;
+    border-radius: 50%;
+    margin-right: 40px;
+    background-color: $blue;
+    transition: background-color 0.3s;
+    @include phones {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    border: 15px solid transparent;
+    border-left-color: #fff;
+    border-right-width: 0;
+    border-bottom-width: 10px;
+    border-top-width: 10px;
+    position: absolute;
+    margin: 13px 17px;
+    @include phones {
+      display: none;
+    }
+    // left: 25Px;
+    transition: transform 0.3s, left 0.3s;
+    @include tablets {
+      margin: 14px 20px;
+    }
+
+    @include phones {
+      margin: 16px 0 16px 25px;
+    }
+  }
+
+  &.active {
+    &::before {
+      background-color: $yellow;
+    }
+    &::after {
+      transform: rotate(90deg);
+      // left: 4px;
+    }
+    .faq__item-title {
+      position: relative;
+      margin-bottom: 0;
+    }
+
+    .faq__item-text {
+      transition: max-height 0.3s, opacity 0.3s;
+      max-height: 1000px;
+      opacity: 1;
+    }
+  }
+}
+
+.faq__item-title {
+  text-align: left;
+  font-family: "Ubu-bold";
+  font-size: 22px;
+  color: $title-color;
+  margin-bottom: 70px;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    transition: background-color 0.3s;
+    &::before {
+      background-color: $yellow;
+    }
+  }
+}
+
+.faq__item-text {
+  font-family: "Ubu";
+  font-size: 18px;
+  color: $text-light;
+  text-align: justify;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s, opacity 0.3s;
+}

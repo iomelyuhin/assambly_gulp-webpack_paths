@@ -1,0 +1,23 @@
+form.feedback(action="formAction" method="POST")
+  h2.feedback__title.title Обратная связь
+  .feedback__wrapper
+    .feedback__fieldset
+      label.feedback__lbl(for="name")
+        h4.feedback__input-title Имя<span>*</span>
+        input(type="text" name="name" required).feedback__input
+      label.feedback__lbl(for="email")
+        h4.feedback__input-title Электронная почта<span>*</span>
+        input(type="email" name="email" required).feedback__input
+    .feedback__fieldset
+      label.feedback__lbl(for="city")
+        h4.feedback__input-title Город<span>*</span>
+        input(type="text" name="city" required).feedback__input
+      label.feedback__lbl(for="phone")
+        h4.feedback__input-title Телефон<span>*</span>
+        input(type="text" name="phone" required).feedback__input
+    .feedback__fieldset
+      label.feedback__lbl(for="message")
+        h4.feedback__input-title Текст сообщения<span>*</span>
+        textarea.feedback__textarea(name="message" cols="50" rows="7")
+  .feedback__button
+    button(type="submit").main-btn.feedback__btn Отправить

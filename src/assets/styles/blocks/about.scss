@@ -1,0 +1,139 @@
+.about__title {
+  margin-top: 80px;
+}
+
+.about__subtitle {
+  font-family: "Bebas";
+  font-size: 30px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.container--about {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.about__text-list {
+  width: 30%;
+
+  @include tablets {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+  }
+}
+
+.about__text-item {
+  margin-bottom: 20px;
+
+  @include tablets {
+    width: 50%;
+  }
+
+  @include phonesMini {
+    width: 100%;
+    margin-left: 30px;
+  }
+}
+
+.about__text-item-title {
+  font-family: "Ubu-bold";
+  text-transform: uppercase;
+  font-size: 18px;
+  color: $text-light;
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s, border-color 0.3s;
+  width: fit-content;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: $blue;
+  }
+
+  &:hover {
+    color: $yellow;
+    border-bottom: 1px solid $yellow;
+  }
+}
+
+.about__text-item-desc {
+  font-family: "Ubu";
+  font-size: 18px;
+  color: $text-light;
+}
+
+.about__images {
+  width: 70%;
+
+  @include tablets {
+    width: 100%;
+  }
+}
+
+.about__images-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include phones {
+    justify-content: center;
+  }
+}
+
+.about__images-item {
+  width: 46%;
+  // margin-right: 30px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  box-shadow: 0 0 10px $text-color;
+  cursor: pointer;
+  transition: filter 0.3s;
+  position: relative;
+
+  &:nth-child(2n) {
+    padding-right: 0;
+  }
+
+  &:hover {
+    filter: brightness(50%);
+
+    &::before {
+      content: "";
+      width: 48px;
+      height: 48px;
+      background: url("/assets/images/icons/zoom.png") center center no-repeat;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      filter: brightness(100%);
+      z-index: 10;
+    }
+  }
+
+  @include tablets {
+    width: 48%;
+  }
+  @include phones {
+    width: 80%;
+  }
+}
+
+.about__image {
+  height: 100%;
+}

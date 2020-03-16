@@ -1,0 +1,13 @@
+-
+  var statsList = [
+    {title: "Сделано заказов", num: 3199},
+    {title: "Довольных клиентов", num: 4578},
+    {title: "Городов России в нашей базе", num: 945},
+    {title: "Положительных отзывов", num: 3765}
+  ]
+
+ul.stats__list
+  each item in statsList
+    li.stats__item
+      .stats__num= item.num
+      .stats__title= item.title

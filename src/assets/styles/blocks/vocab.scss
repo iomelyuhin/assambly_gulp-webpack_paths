@@ -1,0 +1,107 @@
+.vocab__title {
+  font-family: "Bebas";
+  font-size: 30px;
+  color: $title-color;
+  text-align: center;
+}
+
+.vocab__content {
+  margin-top: 30px;
+  display: flex;
+
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.vocab__list-btns {
+  width: 20%;
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include tablets {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.vocab__item-btns-button {
+  width: 50%;
+  flex-shrink: 0;
+  margin-bottom: 5px;
+
+  @include tablets {
+    width: 12.5%;
+  }
+
+  @include phones {
+    width: 17.5%;
+  }
+}
+.vocab__item-btns-button {
+  @include tablets {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.vocab__item-btn {
+  font-family: "Ubu-bold";
+  outline: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #fff;
+  padding: 0 16px;
+  height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  text-align: left;
+  position: relative;
+  background-color: $blue;
+  transition: background-color 0.3s, color 0.3s;
+  width: 80%;
+
+  @include phones {
+    height: 30px;
+  }
+
+  &.active {
+    transition: background-color 0.3s, color 0.3s;
+    color: $title-color;
+    background-color: $yellow;
+  }
+}
+
+.vocab__list-text {
+  background-color: $grey-light;
+  border-radius: 10px;
+  padding: 18px 20px;
+  width: 100%;
+
+  & h3 {
+    font-family: "Ubu-bold";
+    font-size: 22px;
+    color: $title-color;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  & p {
+    margin: 0;
+  }
+}
+
+.vocab__item-text {
+  display: none;
+  font-family: "Ubu";
+  font-size: 18px;
+  color: $text-light;
+  text-align: justify;
+
+  &.active {
+    display: block;
+  }
+}

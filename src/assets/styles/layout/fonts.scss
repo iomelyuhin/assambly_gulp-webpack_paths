@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Ubu";
+  src: url("/assets/fonts/ubuntu.woff2") format("woff2"),
+  url("/assets/fonts/ubuntu.woff") format("woff"),
+  url("/assets/fonts/ubuntu.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Ubu-bold";
+  src: url("/assets/fonts/ubuntubold.woff2") format("woff2"),
+  url("/assets/fonts/ubuntubold.woff") format("woff"),
+  url("/assets/fonts/ubuntubold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Bebas";
+  src: url("/assets/fonts/bebasneueregular.woff2") format("woff2"),
+  url("/assets/fonts/bebasneueregular.woff") format("woff"),
+  url("/assets/fonts/bebasneueregular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Bebas-bold";
+  src: url("/assets/fonts/bebasneuebold.woff2") format("woff2"),
+    url("/assets/fonts/bebasneuebold.woff") format("woff"),
+    url("/assets/fonts/bebasneuebold.ttf") format("truetype");
+}

@@ -1,0 +1,129 @@
+.price {
+  margin-top: 70px;
+}
+
+.price__content {
+  margin-top: 40px;
+}
+
+.price__item {
+  display: flex;
+  background-color: $grey-light;
+  padding: 28px 0;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.price__item-product {
+  width: 25%;
+  padding: 15px;
+
+  @include desktop {
+    width: 35%;
+  }
+
+  @include tablets {
+    width: 40%;
+  }
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.price__item-product-title {
+  font-family: "Ubu-bold";
+  font-size: 22px;
+  color: $title-color;
+  text-align: center;
+}
+
+.price__item-product-image {
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 7px;
+  max-height: 350px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: filter 0.3s;
+  &:hover {
+    filter: brightness(50%);
+
+    &::before {
+      content: "";
+      width: 48px;
+      height: 48px;
+      background: url("/assets/images/icons/zoom.png") center center no-repeat;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      filter: brightness(100%);
+      z-index: 10;
+    }
+  }
+
+  @include tablets {
+    max-height: 480px;
+  }
+}
+
+.price__item-product-pic {
+  @include tablets {
+    width: 100%;
+  }
+}
+
+.price__btn {
+  margin-top: 20px;
+}
+
+.price__item-product-desc {
+  color: $text-light;
+  font-family: "Ubu";
+  font-size: 22px;
+  margin-left: 15px;
+}
+
+.price__item-text--one {
+  margin-bottom: 40px;
+}
+
+.price__item-text-highlighter {
+  font-family: "Ubu-bold";
+  color: $yellow;
+}
+
+.price__item-product-desc-title {
+  margin-top: 42px;
+  font-family: "Ubu-bold";
+  color: $title-color;
+}
+
+.price__item-product-desc-list {
+  margin-top: 10px;
+}
+
+.price__item-product-desc-item {
+  font-size: 20px;
+  padding: 10px 0;
+  & span {
+    color: $blue;
+  }
+
+  & a {
+    color: $yellow;
+    transition: color 0.3s;
+    &:hover {
+      color: $blue;
+      text-decoration: underline;
+    }
+  }
+}
