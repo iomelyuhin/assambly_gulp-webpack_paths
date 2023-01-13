@@ -26,7 +26,7 @@
     "postcss-scss": "^1.0.5",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "webpack": "^4.11.1",
-    "webpack-cli": "^3.0.2"
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "gulp-svg-sprite": "^1.5.0",
